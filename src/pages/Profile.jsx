@@ -260,7 +260,7 @@ export const Profile = ({ findStory, post = true }) => {
           }
 
           {
-            post?.length ?
+            posts?.length ? 
               <div className='grid' style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', rowGap: '17px' }}>
                 {
                   posts?.map(item =>
@@ -269,12 +269,6 @@ export const Profile = ({ findStory, post = true }) => {
                 }
 
               </div> : <div className='grid' style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', rowGap: '17px' }}>
-              There are no posts yet
-                {/* {
-                  posts?.map(item =>
-                    <Image userId={item.owner} postId={item._id} likes={item.likes.length} comments={item.comments.length} key={item._id} src={item.files[0].link}></Image>
-                  )
-                } */}
               </div>
           }
         </div>
