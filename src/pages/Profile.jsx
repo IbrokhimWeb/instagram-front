@@ -252,15 +252,15 @@ export const Profile = ({ findStory, post = true }) => {
         </div>
         <div className="post-content">
           {
-            posts.length === 0 && loading && <Spinner />
+            posts?.length === 0 && loading && <Spinner />
           }
 
           {
-            posts.length === 0 && !loading && <p style={{ textAlign: 'center', marginTop: '72px', width: '100%', fontWeight: 'bold', fontSize: '16px' }}>No posts to see</p>
+            posts?.length === 0 && !loading && <p style={{ textAlign: 'center', marginTop: '72px', width: '100%', fontWeight: 'bold', fontSize: '16px' }}>No posts to see</p>
           }
 
           {
-            post ?
+            post?.length ?
               <div className='grid' style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', rowGap: '17px' }}>
                 {
                   posts?.map(item =>
@@ -269,11 +269,12 @@ export const Profile = ({ findStory, post = true }) => {
                 }
 
               </div> : <div className='grid' style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', rowGap: '17px' }}>
-                {
+              There are no posts yet
+                {/* {
                   posts?.map(item =>
                     <Image userId={item.owner} postId={item._id} likes={item.likes.length} comments={item.comments.length} key={item._id} src={item.files[0].link}></Image>
                   )
-                }
+                } */}
               </div>
           }
         </div>
