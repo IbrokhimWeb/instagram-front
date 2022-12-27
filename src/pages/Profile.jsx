@@ -268,8 +268,7 @@ export const Profile = ({ findStory, post = true }) => {
                   )
                 }
 
-              </div> : <div className='grid' style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', rowGap: '17px' }}>
-              </div>
+              </div> : <></>
           }
         </div>
       </div>
